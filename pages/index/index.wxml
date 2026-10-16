@@ -8,9 +8,9 @@
     <view class="label">输入数值</view>
     <input class="input" type="text" value="{{input}}" bindinput="changeInput" placeholder="支持负数、小数与 1e-3" maxlength="64" confirm-type="done" bindconfirm="recalculate" />
     <view class="error" wx:if="{{error}}">{{error}}</view>
-    <view class="results" wx:if="{{results.length}}"><view class="result" wx:for="{{results}}" wx:key="index"><text class="result-label">{{item.label}}</text><view class="result-number"><text selectable>{{item.value}}</text><text class="unit">{{item.unit}}</text></view></view></view>
+    <view class="results" wx:if="{{results.length}}"><view class="result" wx:for="{{results}}" wx:key="index"><text class="result-label">{{item.label}}</text><view class="result-number"><text user-select="{{true}}">{{item.value}}</text><text class="unit">{{item.unit}}</text></view></view></view>
     <view class="actions"><button class="secondary" bindtap="reset">恢复示例</button><button class="primary" bindtap="copy" disabled="{{!results.length}}">复制结果</button></view>
   </view>
-  <view class="card explanation"><view class="card-title">计算公式</view><text class="formula" selectable>{{tool.formula}}</text><view class="note">{{tool.note}}</view></view>
+  <view class="card explanation"><view class="card-title">计算公式</view><text class="formula" user-select="{{true}}">{{tool.formula}}</text><view class="note">{{tool.note}}</view></view>
   <view class="footer">即时计算 · 无需登录 · 无需联网</view>
 </view>
