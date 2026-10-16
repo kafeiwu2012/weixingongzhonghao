@@ -1,0 +1,32 @@
+.hero { padding: 48rpx 36rpx 68rpx; background: #11243a; color: #fff; }
+.eyebrow { color: #70d9c1; font-size: 22rpx; letter-spacing: 5rpx; }
+.heading { font-size: 48rpx; font-weight: 700; margin-top: 16rpx; }
+.intro { color: #b9c8d7; font-size: 25rpx; margin-top: 14rpx; }
+.body { padding: 0 28rpx 32rpx; }
+.tools { display: flex; flex-wrap: wrap; margin: -28rpx -6rpx 16rpx; }
+.tool { width: calc(50% - 12rpx); margin: 6rpx; background: #fff; border: 2rpx solid #e4eaf0; border-radius: 18rpx; padding: 24rpx 18rpx; }
+.selected { border-color: #148772; background: #edf9f5; }
+.tool-title { font-size: 28rpx; font-weight: 600; }
+.tool-subtitle { font-size: 21rpx; color: #64758a; margin-top: 10rpx; }
+.card { background: #fff; border-radius: 22rpx; padding: 30rpx; margin-top: 20rpx; }
+.card-title { font-size: 31rpx; font-weight: 650; margin-bottom: 24rpx; }
+.label { font-size: 25rpx; color: #5b6b7e; margin: 24rpx 0 12rpx; }
+.hint { float: right; color: #8695a6; font-size: 22rpx; }
+.picker { border: 2rpx solid #e2e9ef; padding: 22rpx; border-radius: 12rpx; font-size: 29rpx; }
+.picker text { float: right; color: #148772; }
+.input { width: 100%; height: 94rpx; border: 2rpx solid #b4d8ce; background: #f8fcfb; border-radius: 12rpx; padding: 0 22rpx; font-size: 34rpx; }
+.error { color: #b44336; font-size: 25rpx; padding-top: 20rpx; }
+.results { margin-top: 28rpx; background: #f4f8fb; border-radius: 14rpx; padding: 4rpx 22rpx; }
+.result { padding: 22rpx 0; border-bottom: 1rpx solid #e1e9f0; }
+.result:last-child { border: none; }
+.result-label { color: #65768a; font-size: 23rpx; }
+.result-number { font-size: 38rpx; color: #126e60; margin-top: 8rpx; overflow-wrap: break-word; }
+.unit { font-size: 25rpx; margin-left: 14rpx; color: #65768a; }
+.actions { display: flex; margin-top: 28rpx; }
+.actions button { flex: 1; font-size: 27rpx; border-radius: 12rpx; line-height: 80rpx; padding: 0; }
+.secondary { background: #eef2f6; color: #496075; margin-right: 16rpx; }
+.primary { background: #148772; color: white; }
+.primary[disabled] { background: #d9e4e0; color: #87988f; }
+.formula { display: block; white-space: pre-wrap; font-size: 27rpx; line-height: 1.9; color: #255c70; }
+.note { margin-top: 20rpx; font-size: 24rpx; color: #708093; line-height: 1.8; }
+.footer { text-align: center; color: #8694a5; font-size: 22rpx; padding: 34rpx 0; padding-bottom: calc(34rpx + env(safe-area-inset-bottom)); }

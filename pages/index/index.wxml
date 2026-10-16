@@ -1,0 +1,16 @@
+<view class="hero"><view class="eyebrow">RF TOOLBOX</view><view class="heading">射频工具箱</view><view class="intro">常用射频计算，随时随地离线使用</view></view>
+<view class="body">
+  <view class="tools"><view wx:for="{{tools}}" wx:key="id" data-index="{{index}}" bindtap="selectTool" class="tool {{active === index ? 'selected' : ''}}"><view class="tool-title">{{item.title}}</view><view class="tool-subtitle">{{item.subtitle}}</view></view></view>
+  <view class="card">
+    <view class="card-title">{{tool.title}}</view>
+    <view class="label">输入单位 <text class="hint">点击切换</text></view>
+    <picker range="{{tool.units}}" value="{{unit}}" bindchange="changeUnit"><view class="picker">{{tool.units[unit]}}<text>⌄</text></view></picker>
+    <view class="label">输入数值</view>
+    <input class="input" type="text" value="{{input}}" bindinput="changeInput" placeholder="支持负数、小数与 1e-3" maxlength="64" confirm-type="done" bindconfirm="recalculate" />
+    <view class="error" wx:if="{{error}}">{{error}}</view>
+    <view class="results" wx:if="{{results.length}}"><view class="result" wx:for="{{results}}" wx:key="index"><text class="result-label">{{item.label}}</text><view class="result-number"><text selectable>{{item.value}}</text><text class="unit">{{item.unit}}</text></view></view></view>
+    <view class="actions"><button class="secondary" bindtap="reset">恢复示例</button><button class="primary" bindtap="copy" disabled="{{!results.length}}">复制结果</button></view>
+  </view>
+  <view class="card explanation"><view class="card-title">计算公式</view><text class="formula" selectable>{{tool.formula}}</text><view class="note">{{tool.note}}</view></view>
+  <view class="footer">即时计算 · 无需登录 · 无需联网</view>
+</view>
